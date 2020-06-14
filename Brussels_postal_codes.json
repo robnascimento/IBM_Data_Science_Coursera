@@ -1,0 +1,119 @@
+[
+ {
+    "zip": "1070",
+    "city": "Anderlecht",
+    "lng": 4.3123401,
+    "lat": 50.8381411
+  },
+  {
+    "zip": "1160",
+    "city": "Auderghem",
+    "lng": 4.4331389,
+    "lat": 50.8156571
+  },
+ {
+    "zip": "1082",
+    "city": "Berchem-Sainte-Agathe",
+    "lng": 4.292702,
+    "lat": 50.8639835
+  },
+  {
+    "zip": "1000",
+    "city": "Bruxelles",
+    "lng": 4.351697,
+    "lat": 50.8465573
+  },
+ {
+    "zip": "1040",
+    "city": "Etterbeek",
+    "lng": 4.3895104,
+    "lat": 50.8368511
+  },
+  {
+    "zip": "1030",
+    "city": "Schaerbeek",
+    "lng": 4.3737121,
+    "lat": 50.8676041
+  },
+  {
+    "zip": "1050",
+    "city": "Ixelles",
+    "lng": 4.3815707,
+    "lat": 50.8222854
+  },
+  {
+    "zip": "1060",
+    "city": "Saint-Gilles",
+    "lng": 4.345668,
+    "lat": 50.8267409
+  },
+  {
+    "zip": "1080",
+    "city": "Molenbeek-Saint-Jean",
+    "lng": 4.3227779,
+    "lat": 50.8543551
+  },
+  {
+    "zip": "1081",
+    "city": "Koekelberg",
+    "lng": 4.3257084,
+    "lat": 50.8622633
+  },
+ 
+  {
+    "zip": "1083",
+    "city": "Ganshoren",
+    "lng": 4.309333,
+    "lat": 50.872986
+  },
+
+  {
+    "zip": "1090",
+    "city": "Jette",
+    "lng": 4.3260903,
+    "lat": 50.8777634
+  },
+  {
+    "zip": "1140",
+    "city": "Evere",
+    "lng": 4.4021602,
+    "lat": 50.8704524
+  },
+  {
+    "zip": "1150",
+    "city": "Woluwe-Saint-Pierre",
+    "lng": 4.4432967,
+    "lat": 50.8292429
+  },
+
+  {
+    "zip": "1170",
+    "city": "Watermael-Boitsfort",
+    "lng": 4.4158177,
+    "lat": 50.799394
+  },
+  {
+    "zip": "1180",
+    "city": "Uccle",
+    "lng": 4.3372348,
+    "lat": 50.8018201
+  },
+  {
+    "zip": "1190",
+    "city": "Forest",
+    "lng": 4.3177512,
+    "lat": 50.8091426
+  },
+  {
+    "zip": "1200",
+    "city": "Woluwe-Saint-Lambert",
+    "lng": 4.4284842,
+    "lat": 50.8466928
+  },
+  {
+    "zip": "1210",
+    "city": "Saint-Josse-Ten-Noode",
+    "lng": 4.3723364,
+    "lat": 50.8530739
+  }  
+]

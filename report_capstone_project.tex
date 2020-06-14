@@ -1,0 +1,153 @@
+\documentclass[a4paper,11pt]{amsart}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{enumerate}
+\usepackage{stmaryrd}
+\usepackage{xspace}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{url}
+\usepackage[colorlinks=true, a4paper=true, pdfstartview=FitV,
+linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+\pdfcompresslevel=9
+
+\usepackage[left=2.61cm,right=2.61cm,top=2.72cm,bottom=2.72cm]{geometry}
+
+%%%%%%%for quotes
+\usepackage{textcmds}
+
+\usepackage[english,frenchb]{babel}
+%\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst, amsfonts, amsmath, amsthm, amssymb, amscd}
+\usepackage{amsmath,amsfonts,amscd,bezier}
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[most]{tcolorbox}
+%%%%%symbol for EUR
+\usepackage{eurosym}
+%%%%%%%%
+\begin{document}
+\begin{tcolorbox}[center,colback=white]
+\begin{center}
+{\large\textsc{The Battle of Neighborhoods in Brussels}}\\
+\end{center}
+\end{tcolorbox}
+
+\section{Introduction}
+
+Brussels is a multicultural and multilingual city in the heart of Europe where more than one-third of the population is foreign. Most of the European Union institutions are located in the city, which is the reason behind the nickname \qq{capital of Europe}. According to \href{https://statbel.fgov.be/en}{statbel.fgov.be}, Brussels gathered 184 different nationalities in 2018.
+
+Dining in Brussels is always a delight and the city offers an extensive variety of cuisines for all foods. The city that houses numerous world-famous attractions is also famous for its gastronomy which is considered to be one of the best in the entire European region. For instance, to highlight some influences on the Belgian cuisine we can name the Italian, French, Asian, Romanian and Turkish cuisines.
+
+Given so many options to eat and drink in Brussels you might wonder whether you can become a restaurateur. In this project, we investigate the key to be successful with a new restaurant opening. Our results are based on a careful study of several datasets involving many factors such as location, target market, competition, and so on. This data analysis will make your restaurant succeed and be sustainable through time.
+
+\section{Problem Statement} 
+
+Our goal is to find the best location for a new restaurant in Brussels. As mentioned earlier, there is a great variety of restaurants in the city. Then it is clear that in order to succeed in this area we must follow a strategical plan. In this scenario, we highlight some points that we need to take into account:
+\begin{enumerate}[$\diamond$]
+\item Demographic Considerations; 
+\item Location;
+\item Target Market;
+\item Competition.
+\end{enumerate}	
+
+The classic real estate saying \qq{location, location, location} applies to choosing a site for a new restaurant. Location influences the success or failure of a restaurant in a host of ways, from attracting enough initial customer interest to being convenient to visit. But the restaurant’s location is also interrelated to other factors, some of which are changeable, while others are not. A great restaurant location, for instance, must have an affordable rent, or it does not matter how much foot traffic the site receives.
+
+Choosing the right location for a new restaurant is important, not to say critical. We need to establish what is most important to our business: being close to the market, good transport links, price or neighbourhood. The availability of specific technology and facilities (in industrial zones, for instance) may also be critical.
+
+The location ties the cuisine and concept to local demographic mixes of residents and people who work in the area. Therefore, we should choose the right area by studying the region before committing to any plan. Common market targets include business professionals, urban hipsters, families with children, sports enthusiasts, culture aficionados and fast-food customers. 
+
+A demographic analysis that is based on information about the patrons' backgrounds is a helpful predictor what our customers' tastes will be. This analysis helps us make an informed choice about whether our restaurant is in the right area. Basically, demographics means data about a given population. The data can include a number of categories, such as age, gender, ethnicity, religion, household size, marriage status, income and education level, just to a name a few. Demographics often tell us a lot about purchasing behaviour and dining habits.
+
+In order to identify the exact target restaurant customer, we divide the market buyer groups that require distinct products. To do that we use data about the area of our business to segment the market into variables:
+
+\begin{enumerate}[$\diamond$]
+\item  Demographical (age, gender, occupation, income, household composition, etc.);
+\item Geographical (neighbourhood).
+\end{enumerate}
+Here we should mention that another important variable would be the one about \qq{Psychographic}, i.e., a topic concerning lifestyles, regardless of demographical and geographical. Unfortunately, in this project we have not used any information about this variable. A more thorough analysis of the market should take that point into account. 
+
+Back to our methodology, we then proceed to define the target market. Here, we evaluate the attractiveness of the segments and pick the one or more we intend to hit. Roughly speaking, the target market is the types of people, who are most likely to enjoy what we want to offer. 
+
+Finally, we deal with the competition. We all know that restaurants with plenty of competitors around can create foot traffic. Thus, this can affect our revenue. It’s a good idea to check out the neighbourhood to see if there are other restaurants nearby. Are there already too many restaurants in the area? Do any of these have the same concept as ours?
+
+\section{Target Audience}
+
+The objective of this project is to recommend the best location for opening a new restaurant in Brussels. Our target is anyone who is interested in becoming a successful restaurateur. 
+
+\section{Data Analysis}
+In this section we give a description of the data and how it will be used to solve our problem.
+
+All the data used in our research is available on the following websites: 
+\begin{enumerate}[$\diamond$]
+\item \href{https://statbel.fgov.be/en}{https://statbel.fgov.be}
+\item \href{http://monitoringdesquartiers.brussels}{http://monitoringdesquartiers.brussels}
+\end{enumerate}
+As part of the Open Data initiative, all these datasets available to everyone. 
+
+Once we get all the dataset in our hands we begin our analysis by doing the data wrangling and cleaning. We divide this step into four analysis dealing with the factors demographic considerations, location, target market, and competition. In this part, we give some graphic representation of the data to get information from the population in Brussels. 
+
+Then we use FourSquare API to obtain the venue data for all neighbourhoods in Brussels. In this part, we will analyse the type of restaurant that makes most success. In order to better compare the results we plot a graphic with the top 10 foods in Brussels. 
+
+Finally, we employ the cluster analysis to identify the features, i.e., we run $k$-means to cluster the neighborhoods into $k$ clusters. To obtain the best value for $k$, we apply two methods: The Elbow and The Silhouette Methods. Then, we explain why one method does give not give the optimal value. Once we obtain the value of $k$, we create a new DataFrame that includes the clusters, and we proceed to obtain a visualization of the resulting clusters. To get an idea of the area we use folium.map to plot the areas where the clusters are. Our last step consists in examining these clusters. In doing so, we allocate the most suitable areas for opening our restaurant.
+\section{Results}\label{result}
+The cluster analysis gives that the best number of clusters for the neighborhoods in Brussels is 9:
+\begin{enumerate}[a)]
+\item Cluster Zero: Berchem-Sainte-Agathe and Evere.
+\item Cluster One: Ixelles and Uccle.
+\item Cluster Two: Ganshoren, Jette and Saint-Gilles.
+\item Cluster Three: Forest and Saint-Josse-Ten-Noode.
+\item Cluster Four: Anderlecht, Koekelberg and Molenbeek-Saint-Jean.
+\item Cluster Five: Auderghem, Etterbeek, Watermael-Boitsfort and Woluwe-Saint-Pierre.
+\item Cluster Six: Bruxelles.
+\item Cluster Seven: Schaerbeek.
+\item Cluster Eight: Woluwe-Saint-Lambert.
+\end{enumerate}
+Before we proceed any further let us recall the definition of groups we have used in our project to identify different nationalities in Brussels:
+\begin{enumerate}[1)]
+
+\item \textbf{UE15}: This includes Germany, Austria, Luxembourg, Netherlands, Denmark, Spain, Portugal, Finland, France, United Kingdom, Greece, Ireland, Sweden, and Italy.
+ 
+\item \textbf{UE-NEW13}: This includes the new EU members that entered in $2004$, $2007$, and $2013$: Latvia, Lithuania, Bulgaria, Malta, Cyprus, Poland, Estonia, Czech Republic, Romania, Slovakia, Hungary, Slovenia, and Croatia.
+ 
+\item \textbf{R-EU}: This includes the other countries belonging to the geographical continent \qq{Europe}.
+ 
+\item \textbf{Turkey}. 
+ 
+\item \textbf{North Africa}: Algeria, Libya, Tunisia, Morocco, and Egypt.
+ 
+\item \textbf{Sub-Sah-Africa}: All African countries except North African countries.
+ 
+\item \textbf{Latin America}: Here it is used the definition in terms of physical geography, i.e., all countries in America except USA and Canada.
+ 
+\item \textbf{RCO-EU}: Australia, Canada, South Korea, United States, Japan, New Zealand, and Israel.
+ 
+\item \textbf{Other Countries}: This includes all other nationalities, as well as refugees whose country of origin is unknown, those whose nationality is unknown and stateless persons.
+\end{enumerate}
+Now we give the main results for each cluster, where Foreign Pop. stands for the majority of foreign people.
+\begin{center}
+  \begin{tabular}{ | c | c | c | c|}
+    \hline
+     Cluster & Average Income & Top 3 Foods & Foreign Pop. \\ \hline
+Zero &  $20, 885$\euro & Italian Restaurant, Bakery and Snack Place & R-EU\\ \hline
+One &  $20, 411$\euro & French, Vegetarian and Italian Restaurants & UE15 \\ \hline
+Two &  $19, 367$\euro & Bakery, Brasserie and Pizza Place & Latin America\\ \hline
+ Three &  $17, 098$\euro & Bakery, Sandwich and Snack Places & Sub-Sah-Africa\\ \hline
+Four & $18, 010$\euro & Bakery, Pizza and Snack Places & North Africa\\ \hline
+Five & $23, 160$\euro & French, Italian and Thai Restaurants & UE15\\ \hline
+Six & $17, 802$\euro & Coffee Shop, Fast Food and Sandwich Place & Sub-Sah-Africa\\ \hline
+Seven & $17, 962$\euro & Snack Place, Turkish and Kebab Restaurants & Turkey\\ \hline
+Eight & $23, 288$\euro & Italian Restaurant, Fast Food and \qq{Restaurant} & RCO-EU \\ \hline
+  \end{tabular}
+\end{center}
+
+\section{Comments}
+
+In the first part of this project, we have established where the different group of nationalities live in Brussels. It would be interesting to have a dataset about their occupations, age, and some topic concerning lifestyles, regardless of demographical and geographical. In this way we would obtain a more complete result about the type of food and location where we should open our restaurant. 
+
+Sometimes through intuition conclusions may arise before the premises are totally clear. In our analysis, a not-surprising result was that in clusters with the least income people don't go too often to restaurants. Actually, they buy food that is more affordable, for example, sandwiches and snacks. On the other hand, in clusters with larger incomes people go more often to restaurants.
+\section{Conclusion}
+We highlight that even though there are various restaurants in Brussels, it is still a good business to invest in. In Section \ref{result}, we have given our results according to each cluster. By taking into account the demographics, and the top foods in Brussels, we conclude that there is scope for more restaurants in Brussels. For instance, there is definitely scope for a snack place in Forest, an Italian restaurant in Uccle, and a fast food restaurant in Etterbeek. Many more conclusions can be taken from our analysis about a perfect food category for each neighborhood. Unfortunately, we are unable to guarantee which one will give more profit. To do that we would need more information about the price of material design for the restaurant, fresh products, rent, number of employees, and so on.
+\end{document}
+
